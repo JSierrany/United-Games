@@ -1,0 +1,15 @@
+var imageLoop;
+imageLoop = setInterval(cycleImage, 5000);
+
+$(".sb-bignav").click(function() {
+    clearTimeout(imageLoop);
+    imageLoop = setInterval(cycleImage, 5000);
+});
+
+function cycleImage(){
+  if $("input:checked, input[checked]").nextAll(":input:first").length == 0) {
+      $("input:first").attr("checked", "checked");
+  }
+  $("input:checked, input[checked]").removeAttr("checked")
+    .nextAll(":input:first").attr("checked", "checked");
+}
